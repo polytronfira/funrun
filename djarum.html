@@ -5,34 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Polytron Fest 50th Anniversay</title>
   <style>
-    body {
+    html, body {
       margin: 0;
       padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      height: 100%;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
       background: url('background.png') no-repeat center fixed;
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
-      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
-    .container {
+    .wrapper {
       display: flex;
       flex-direction: column;
-      gap: 1rem;
+      align-items: center;
       width: 90%;
       max-width: 400px;
-      padding: 2rem;
-      background: rgba(0,0,0,0.2);
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     }
 
-    button {
-      padding: 1rem;
+    .header, .footer {
+      width: 100%;
+    }
+
+    .header img,
+    .footer img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 15px;
+      margin-bottom: 8px;
+    }
+
+    .content {
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      box-sizing: border-box;
+      background: rgba(0,0,0,0.2);
+      border-radius: 15px 15px 15px 15px;
+    }
+
+    .content button {
+      padding: 12px;
       font-size: 1rem;
       border: none;
       border-radius: 32px;
@@ -42,24 +63,61 @@
       transition: background-color 0.3s ease;
     }
 
-    button:hover {
+    .content button:hover {
       background-color: #ac5203;
     }
 
-    @media (max-width: 500px) {
-      button {
-        font-size: 0.9rem;
-        padding: 0.8rem;
+    .footer {
+      background-color: transparent;
+      box-shadow: none;
+      padding: 16px 0;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 480px) {
+      .content {
+        padding: 16px;
+      }
+
+      .content button {
+        font-size: 0.95rem;
+        padding: 10px;
       }
     }
+
+    @media (min-width: 768px) {
+      .wrapper {
+        max-width: 500px;
+      }
+
+      .content button {
+        font-size: 1.1rem;
+      }
+    }
+
   </style>
 </head>
 <body>
-  <div class="container">
-    <button onclick="window.location.href='https://forms.gle/8muk2TGHb8GyZXf36'">Fun Run 5K Jakarta | Kuota 100</button>
-    <button onclick="window.location.href='https://forms.gle/RoAu7FZRdMwv9wTS8'">Fun Walk 2,5K Jakarta | Kuota 100</button>
-    <button onclick="window.location.href='https://forms.gle/7CvnoiYEpRJTxoj6A'">Fun Run 5K Semarang | Kuota 100</button>
-    <button onclick="window.location.href='https://forms.gle/ut4igYim6VVhAWAi7'">Fun Walk 2,5K Semarang | Kuota 100</button>
+
+  <div class="wrapper">
+    <!-- Header Image -->
+    <div class="header">
+      <img src="header-image.png" alt="Header Image" />
+    </div>
+
+    <!-- Button Container -->
+    <div class="content">
+        <button onclick="window.location.href='https://forms.gle/8muk2TGHb8GyZXf36'">Fun Run 5K Jakarta | Kuota 100</button>
+        <button onclick="window.location.href='https://forms.gle/RoAu7FZRdMwv9wTS8'">Fun Walk 2,5K Jakarta | Kuota 100</button>
+        <button onclick="window.location.href='https://forms.gle/7CvnoiYEpRJTxoj6A'">Fun Run 5K Semarang | Kuota 100</button>
+        <button onclick="window.location.href='https://forms.gle/ut4igYim6VVhAWAi7'">Fun Walk 2,5K Semarang | Kuota 100</button>
+    </div>
+
+    <!-- Footer Image -->
+    <div class="footer">
+      <img src="footer-image.png" alt="Footer Image" />
+    </div>
   </div>
+
 </body>
 </html>
